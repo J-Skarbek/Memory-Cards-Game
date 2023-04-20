@@ -56,7 +56,7 @@ function Body() {
       array[i] = t;
     }
     console.log(array);
-    return array;
+    return setCards(array);
   }
 
 
