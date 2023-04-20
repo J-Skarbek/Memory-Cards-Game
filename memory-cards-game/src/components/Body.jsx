@@ -60,13 +60,17 @@ function Body() {
   }
 
 
-
-  console.log(cards)
+  function testState() {
+    console.log(cards)
+  }
+  // console.log(cards)
 
   return (
     <div>
       <p>Test</p>
       <button onClick={() => shuffle(cards)}>Click to test shuffle the cards array</button>
+      <button onClick={testState}>Click to see the state values</button>
+  
     </div>
   )
 }
