@@ -39,13 +39,34 @@ function Body() {
     {
       name: 'card 12'
     }
-  ])
+  ]);
+
+  function shuffle(array) {
+    let m = array.length, t, i;
+  
+    // While there remain elements to shuffle…
+    while (m) {
+  
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * m--);
+  
+      // And swap it with the current element.
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+    console.log(array);
+    return array;
+  }
+
+
 
   console.log(cards)
 
   return (
     <div>
       <p>Test</p>
+      <button onClick={() => shuffle(cards)}>Click to test shuffle the cards array</button>
     </div>
   )
 }
