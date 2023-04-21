@@ -41,28 +41,9 @@ function Body() {
     }
   ]);
 
-  // function shuffle(array) {
-  //   let m = array.length, t, i;
-  
-  //   // While there remain elements to shuffle…
-  //   while (m) {
-  
-  //     // Pick a remaining element…
-  //     i = Math.floor(Math.random() * m--);
-  
-  //     // And swap it with the current element.
-  //     t = array[m];
-  //     array[m] = array[i];
-  //     array[i] = t;
-  //   }
-  //   console.log(array);
-  //   return setCards(array);
-  // }
-
   function shuffleCards(array) {
-    // let newArr = array;
-    setCards(newArr => {
-      let m = newArr.length, t, i;
+    setCards(array => {
+      let m = array.length, t, i;
   
       // While there remain elements to shuffle…
       while (m) {
@@ -71,20 +52,18 @@ function Body() {
         i = Math.floor(Math.random() * m--);
     
         // And swap it with the current element.
-        t = newArr[m];
-        newArr[m] = newArr[i];
-        newArr[i] = t;
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
       }
-      return newArr;
+      return array;
     })
-    // console.log(newArr)
+    // console.log(array)
   }
-
 
   function testState() {
     console.log(cards)
   }
-  // console.log(cards)
 
   return (
     <div>
