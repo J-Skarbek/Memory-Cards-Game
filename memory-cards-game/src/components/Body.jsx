@@ -1,43 +1,56 @@
 import React from "react";
+import { nanoid } from 'nanoid'
 
 function Body() {
 
   const [cards, setCards] = React.useState([
     {
       name: 'Jerry',
+      id: nanoid(),
     },
     {
       name: 'George',
+      id: nanoid(),
     },
     {
       name: 'Elaine',
+      id: nanoid(),
     },
     {
       name: 'Kramer',
+      id: nanoid(),
     },
     {
       name: 'Newman',
+      id: nanoid(),
     },
     {
       name: 'Putty',
+      id: nanoid(),
     },
     {
       name: 'Susan',
+      id: nanoid(),
     },
     {
       name: 'Franklin Delano Romanowski',
+      id: nanoid(),
     },
     {
       name: 'Kruger',
+      id: nanoid(),
     },
     {
       name: 'Mrs. Jerry',
+      id: nanoid(),
     },
     {
       name: 'Marissa Tomei',
+      id: nanoid(),
     },
     {
       name: 'Mickey',
+      id: nanoid(),
     }
   ]);
 
