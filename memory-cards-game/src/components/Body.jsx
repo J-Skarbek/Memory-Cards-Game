@@ -4,40 +4,40 @@ function Body() {
 
   const [cards, setCards] = React.useState([
     {
-      name: 'card 1',
+      name: 'Jerry',
     },
     {
-      name: 'card 2'
+      name: 'George',
     },
     {
-      name: 'card 3'
+      name: 'Elaine',
     },
     {
-      name: 'card 4'
+      name: 'Kramer',
     },
     {
-      name: 'card 5',
+      name: 'Newman',
     },
     {
-      name: 'card 6'
+      name: 'Putty',
     },
     {
-      name: 'card 7'
+      name: 'Susan',
     },
     {
-      name: 'card 8'
+      name: 'Franklin Delano Romanowski',
     },
     {
-      name: 'card 9',
+      name: 'Kruger',
     },
     {
-      name: 'card 10'
+      name: 'Mrs. Jerry',
     },
     {
-      name: 'card 11'
+      name: 'Marissa Tomei',
     },
     {
-      name: 'card 12'
+      name: 'Mickey',
     }
   ]);
 
