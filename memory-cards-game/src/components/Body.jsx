@@ -7,50 +7,62 @@ function Body() {
     {
       name: 'Jerry',
       id: nanoid(),
+      isClicked: false,
     },
     {
       name: 'George',
       id: nanoid(),
+      isClicked: false,
     },
     {
       name: 'Elaine',
       id: nanoid(),
+      isClicked: false,
     },
     {
       name: 'Kramer',
       id: nanoid(),
+      isClicked: false,
     },
     {
       name: 'Newman',
       id: nanoid(),
+      isClicked: false,
     },
     {
       name: 'Putty',
       id: nanoid(),
+      isClicked: false,
     },
     {
       name: 'Susan',
       id: nanoid(),
+      isClicked: false,
     },
     {
       name: 'Franklin Delano Romanowski',
       id: nanoid(),
+      isClicked: false,
     },
     {
       name: 'Kruger',
       id: nanoid(),
+      isClicked: false,
     },
     {
       name: 'Mrs. Jerry',
       id: nanoid(),
+      isClicked: false,
     },
     {
       name: 'Marissa Tomei',
       id: nanoid(),
+      isClicked: false,
     },
     {
       name: 'Mickey',
       id: nanoid(),
+      isClicked: false,
     }
   ]);
 
