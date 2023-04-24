@@ -8,61 +8,73 @@ function Body() {
       name: 'Jerry',
       id: nanoid(),
       isClicked: false,
+      url: '',
     },
     {
       name: 'George',
       id: nanoid(),
       isClicked: false,
+      url: '',
     },
     {
       name: 'Elaine',
       id: nanoid(),
       isClicked: false,
+      url: '',
     },
     {
       name: 'Kramer',
       id: nanoid(),
       isClicked: false,
+      url: '',
     },
     {
       name: 'Newman',
       id: nanoid(),
       isClicked: false,
+      url: '',
     },
     {
       name: 'Putty',
       id: nanoid(),
       isClicked: false,
+      url: '',
     },
     {
       name: 'Susan',
       id: nanoid(),
       isClicked: false,
+      url: '',
     },
     {
       name: 'Franklin Delano Romanowski',
       id: nanoid(),
       isClicked: false,
+      url: '',
     },
     {
       name: 'Kruger',
       id: nanoid(),
       isClicked: false,
+      url: '',
     },
     {
       name: 'Mrs. Jerry',
       id: nanoid(),
       isClicked: false,
+      url: '',
     },
     {
       name: 'Marissa Tomei',
       id: nanoid(),
       isClicked: false,
+      url: '',
     },
     {
       name: 'Mickey',
       id: nanoid(),
       isClicked: false,
+      url: '',
     }
   ]);
 
