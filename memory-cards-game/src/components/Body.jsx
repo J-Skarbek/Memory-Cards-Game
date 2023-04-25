@@ -116,13 +116,25 @@ function Body() {
     console.log(cards)
   }
 
+  function displayCards() {
+    cards.map(card => {
+      return (
+      <img 
+        src={card.url}
+        key={card.id}
+        alt={card.name}
+      />
+      )
+    })
+  }
+
   return (
     <div>
       <p>Test</p>
       <button onClick={() => shuffleCards(cards)}>Click to test shuffle the cards array</button>
       <button onClick={testState}>Click to see the state values</button>
-      <img src={Newman} alt='kramer'/>
-  
+      {/* <img src={Newman} alt='kramer'/> */}
+      { displayCards() }
     </div>
   )
 }
