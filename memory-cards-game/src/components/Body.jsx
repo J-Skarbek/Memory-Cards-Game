@@ -1,5 +1,7 @@
 import React from "react";
 import { nanoid } from 'nanoid'
+import Card from "./Card";
+
 import Kramer from '../assets/kramer.jpg'
 import Newman from '../assets/newman.jpg'
 import FDR from '../assets/fdr.jpg'
@@ -119,11 +121,11 @@ function Body() {
   function displayCards() {
     cards.map(card => {
       return (
-      <img 
-        src={card.url}
-        key={card.id}
-        alt={card.name}
-      />
+        <Card 
+          url={card.url}
+          key={card.id}
+          alt={card.name}
+        />
       )
     })
   }
