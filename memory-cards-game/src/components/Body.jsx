@@ -136,13 +136,13 @@ function Body() {
     return renderCards;
   }
 
+
   return (
     <div>
       <p>Test</p>
       <button onClick={() => shuffleCards(cards)}>Click to test shuffle the cards array</button>
       <button onClick={testState}>Click to see the state values</button>
-      {/* <img src={Newman} alt='kramer'/> */}
-      { displayCards() }
+        { displayCards() }
     </div>
   )
 }
