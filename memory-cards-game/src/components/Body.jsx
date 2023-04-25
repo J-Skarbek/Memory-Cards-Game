@@ -17,7 +17,7 @@ import Jerry from '../assets/jerry.jpg'
 
 
 
-function Body() {
+function Body(props) {
 
   const [cards, setCards] = React.useState([
     {
@@ -101,14 +101,15 @@ function Body() {
   //   }, [cards]);
   // }
 
-  React.useEffect(() => {
-    console.log('effect test')
-  }, [cards]); // Only re-run the effect if count changes
+  // React.useEffect(() => {
+  //   console.log('effect test')
+  // }, [cards]); // Only re-run the effect if count changes
 
   function shuffleCards() {
     
     setCards(array => {
-      let m = array.length, t, i;
+      const newArr = array;
+      let m = newArr.length, t, i;
   
       // While there remain elements to shuffle…
       while (m) {
@@ -117,11 +118,11 @@ function Body() {
         i = Math.floor(Math.random() * m--);
     
         // And swap it with the current element.
-        t = array[m];
-        array[m] = array[i];
-        array[i] = t;
+        t = newArr[m];
+        newArr[m] = newArr[i];
+        newArr[i] = t;
       }
-      return array;
+      return newArr;
     })
     // console.log(array)
   }
@@ -179,7 +180,17 @@ function Body() {
       <p>Test</p>
       <button onClick={() => shuffleCards()}>Click to test shuffle the cards array</button>
       <button onClick={testState}>Click to see the state values</button>
-        { cards && renderCards }
+        {/* { cards && renderCards } */}
+        {cards.map(card => {
+          return (
+            <Card
+              key={card.id}
+              url={card.url}
+              isClicked={card.isClicked}
+              name={card.name}
+            />
+          )
+        })}
     </div>
   )
 }

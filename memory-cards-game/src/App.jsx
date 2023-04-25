@@ -6,12 +6,20 @@ import Header from './components/Header'
 import Body from './components/Body'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [score, setScore] = useState(0);
+
+  const [highScore, setHighScore] = useState(0);
 
   return (
     <div className="App">
-      <Header />
-      <Body />
+      <Header 
+        score={score}
+        highScore={highScore}
+      />
+      <Body 
+        score={score}
+      />
     </div>
   )
 }

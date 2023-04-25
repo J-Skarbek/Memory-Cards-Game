@@ -12,7 +12,7 @@ function Header(props) {
         </p>
       </div>
       <div className="header-left flex flex-col items-end">
-        <p>Score: 0</p>
+        <p>Score: {props.score}</p>
         <p>Best Score: 12</p>
      </div>
     </div>
