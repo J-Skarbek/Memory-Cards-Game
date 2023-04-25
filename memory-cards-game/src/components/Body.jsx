@@ -1,6 +1,8 @@
 import React from "react";
 import { nanoid } from 'nanoid'
-import kramer from '../assets/kramer.jpg'
+import Kramer from '../assets/kramer.jpg'
+import Newman from '../assets/newman.jpg'
+import FDR from '../assets/fdr.jpg'
 
 function Body() {
 
@@ -27,13 +29,13 @@ function Body() {
       name: 'Kramer',
       id: nanoid(),
       isClicked: false,
-      url: kramer,
+      url: Kramer,
     },
     {
       name: 'Newman',
       id: nanoid(),
       isClicked: false,
-      url: '',
+      url: Newman,
     },
     {
       name: 'Putty',
@@ -51,7 +53,7 @@ function Body() {
       name: 'Franklin Delano Romanowski',
       id: nanoid(),
       isClicked: false,
-      url: '',
+      url: FDR,
     },
     {
       name: 'Kruger',
@@ -108,7 +110,7 @@ function Body() {
       <p>Test</p>
       <button onClick={() => shuffleCards(cards)}>Click to test shuffle the cards array</button>
       <button onClick={testState}>Click to see the state values</button>
-      <img src={kramer} alt='kramer'/>
+      <img src={Newman} alt='kramer'/>
   
     </div>
   )
