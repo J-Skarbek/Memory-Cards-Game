@@ -119,15 +119,16 @@ function Body() {
   }
 
   function displayCards() {
-    cards.map(card => {
+    const renderCards = cards.map(card => {
       return (
-        <Card 
+        <Card
+          key={card.id} 
           url={card.url}
-          key={card.id}
           alt={card.name}
         />
       )
     })
+    return renderCards;
   }
 
   return (
