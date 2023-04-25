@@ -91,14 +91,22 @@ function Body() {
       id: nanoid(),
       isClicked: false,
       url: Maestro,
-    }
+    },
   ]);
 
+  // function updateCards() {
+  //   React.useEffect(() => {
+  //     console.log('effect test')
+  //      displayCards();
+  //   }, [cards]);
+  // }
+
   React.useEffect(() => {
-    displayCards();
+    console.log('effect test')
   }, [cards]); // Only re-run the effect if count changes
 
-  function shuffleCards(array) {
+  function shuffleCards() {
+    
     setCards(array => {
       let m = array.length, t, i;
   
@@ -122,27 +130,56 @@ function Body() {
     console.log(cards)
   }
 
-  function displayCards() {
-    const renderCards = cards.map(card => {
-      return (
-        <Card
-          key={card.id} 
-          url={card.url}
-          isClicked={card.isClicked}
-          name={card.name}
-        />
-      )
-    })
-    return renderCards;
-  }
+  // function displayCards() {
+  //   const renderCards = cards.map(card => {
+  //     return (
+  //       <Card
+  //         key={card.id}
+  //         url={card.url}
+  //         isClicked={card.isClicked}
+  //         name={card.name}
+  //       />
+  //     )
+  //   })
+  //   return renderCards;
+  // }
+
+  const renderCards = cards.map(card => {
+    return (
+      <Card
+        key={card.id}
+        url={card.url}
+        isClicked={card.isClicked}
+        name={card.name}
+      />
+    )
+  })
+
+  // function displayCards() {
+  //   React.useEffect(() => {
+  //     console.log('effect test')
+  //     const renderCards = cards.map(card => {
+  //       return (
+  //         <Card
+  //           key={card.id}
+  //           url={card.url}
+  //           isClicked={card.isClicked}
+  //           name={card.name}
+  //         />
+  //       )
+  //     })
+  //     return renderCards;
+  //   }, [cards]);
+  // }
+
 
 
   return (
     <div>
       <p>Test</p>
-      <button onClick={() => shuffleCards(cards)}>Click to test shuffle the cards array</button>
+      <button onClick={() => shuffleCards()}>Click to test shuffle the cards array</button>
       <button onClick={testState}>Click to see the state values</button>
-        { displayCards() }
+        { cards && renderCards }
     </div>
   )
 }
