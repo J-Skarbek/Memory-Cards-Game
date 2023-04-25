@@ -94,22 +94,31 @@ function Body(props) {
     },
   ]);
 
-  // function updateCards() {
-  //   React.useEffect(() => {
-  //     console.log('effect test')
-  //      displayCards();
-  //   }, [cards]);
+  // function shuffleCards() {
+    
+  //   setCards(array => {
+  //     const newArr = array;
+  //     let m = newArr.length, t, i;
+  
+  //     // While there remain elements to shuffle…
+  //     while (m) {
+    
+  //       // Pick a remaining element…
+  //       i = Math.floor(Math.random() * m--);
+    
+  //       // And swap it with the current element.
+  //       t = newArr[m];
+  //       newArr[m] = newArr[i];
+  //       newArr[i] = t;
+  //     }
+  //     return newArr;
+  //   })
+  //   // console.log(array)
   // }
 
-  // React.useEffect(() => {
-  //   console.log('effect test')
-  // }, [cards]); // Only re-run the effect if count changes
-
-  function shuffleCards() {
-    
-    setCards(array => {
-      const newArr = array;
-      let m = newArr.length, t, i;
+  function shuffle(array) {
+    let newArr = array;
+    let m = newArr.length, t, i;
   
       // While there remain elements to shuffle…
       while (m) {
@@ -123,27 +132,15 @@ function Body(props) {
         newArr[i] = t;
       }
       return newArr;
-    })
-    // console.log(array)
+  }
+
+  function shuffleCards() {
+    setCards(shuffle([...cards]))
   }
 
   function testState() {
     console.log(cards)
   }
-
-  // function displayCards() {
-  //   const renderCards = cards.map(card => {
-  //     return (
-  //       <Card
-  //         key={card.id}
-  //         url={card.url}
-  //         isClicked={card.isClicked}
-  //         name={card.name}
-  //       />
-  //     )
-  //   })
-  //   return renderCards;
-  // }
 
   const renderCards = cards.map(card => {
     return (
@@ -156,25 +153,6 @@ function Body(props) {
       />
     )
   })
-
-  // function displayCards() {
-  //   React.useEffect(() => {
-  //     console.log('effect test')
-  //     const renderCards = cards.map(card => {
-  //       return (
-  //         <Card
-  //           key={card.id}
-  //           url={card.url}
-  //           isClicked={card.isClicked}
-  //           name={card.name}
-  //         />
-  //       )
-  //     })
-  //     return renderCards;
-  //   }, [cards]);
-  // }
-
-
 
   return (
     <div>
