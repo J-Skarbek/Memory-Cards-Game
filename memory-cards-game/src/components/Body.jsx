@@ -1,5 +1,5 @@
 import React from "react";
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid';
 import Card from "./Card";
 
 import Kramer from '../assets/kramer.jpg'
@@ -94,6 +94,10 @@ function Body() {
     }
   ]);
 
+  React.useEffect(() => {
+    displayCards();
+  }, [cards]); // Only re-run the effect if count changes
+
   function shuffleCards(array) {
     setCards(array => {
       let m = array.length, t, i;
@@ -124,7 +128,8 @@ function Body() {
         <Card
           key={card.id} 
           url={card.url}
-          alt={card.name}
+          isClicked={card.isClicked}
+          name={card.name}
         />
       )
     })
