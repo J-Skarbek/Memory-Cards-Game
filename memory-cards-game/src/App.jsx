@@ -11,6 +11,8 @@ function App() {
 
   const [highScore, setHighScore] = useState(0);
 
+  const tallyScore = () => setScore(score => score += 1);
+
   return (
     <div className="App">
       <Header 
@@ -19,6 +21,7 @@ function App() {
       />
       <Body 
         score={score}
+        tallyScore={tallyScore}
       />
     </div>
   )

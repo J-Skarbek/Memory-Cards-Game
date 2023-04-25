@@ -152,6 +152,7 @@ function Body(props) {
         url={card.url}
         isClicked={card.isClicked}
         name={card.name}
+        tallyScore={props.tallyScore}
       />
     )
   })
@@ -188,6 +189,7 @@ function Body(props) {
               url={card.url}
               isClicked={card.isClicked}
               name={card.name}
+              tallyScore={props.tallyScore}
             />
           )
         })}

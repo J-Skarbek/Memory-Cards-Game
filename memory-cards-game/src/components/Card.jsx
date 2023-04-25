@@ -3,7 +3,7 @@ import React from "react";
 function Card(props) {
 
   return (
-    <div className="card">
+    <div className="card" onClick={props.tallyScore}>
       <img 
         src={props.url}
         alt={props.name}
