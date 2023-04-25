@@ -3,6 +3,17 @@ import { nanoid } from 'nanoid'
 import Kramer from '../assets/kramer.jpg'
 import Newman from '../assets/newman.jpg'
 import FDR from '../assets/fdr.jpg'
+import Maestro from '../assets/Bobcobb.jpg'
+import Elaine from '../assets/Elaine.jpg'
+import George from '../assets/george.jpg'
+import Kruger from '../assets/kruger.jpg'
+import Puddy from '../assets/puddy.jpg'
+import Jeannie from '../assets/steinmen.jpg'
+import Susan from '../assets/susan-on-seinfeld.jpg'
+import Marissa from '../assets/tomai.jpg'
+import Jerry from '../assets/jerry.jpg'
+
+
 
 function Body() {
 
@@ -11,19 +22,19 @@ function Body() {
       name: 'Jerry',
       id: nanoid(),
       isClicked: false,
-      url: '',
+      url: Jerry,
     },
     {
       name: 'George',
       id: nanoid(),
       isClicked: false,
-      url: '',
+      url: George,
     },
     {
       name: 'Elaine',
       id: nanoid(),
       isClicked: false,
-      url: '',
+      url: Elaine,
     },
     {
       name: 'Kramer',
@@ -41,13 +52,13 @@ function Body() {
       name: 'Puddy',
       id: nanoid(),
       isClicked: false,
-      url: '',
+      url: Puddy,
     },
     {
       name: 'Susan',
       id: nanoid(),
       isClicked: false,
-      url: '',
+      url: Susan,
     },
     {
       name: 'Franklin Delano Romanowski',
@@ -59,25 +70,25 @@ function Body() {
       name: 'Kruger',
       id: nanoid(),
       isClicked: false,
-      url: '',
+      url: Kruger,
     },
     {
       name: 'Jeannie Steinman',
       id: nanoid(),
       isClicked: false,
-      url: '',
+      url: Jeannie,
     },
     {
       name: 'Marissa Tomei',
       id: nanoid(),
       isClicked: false,
-      url: '',
+      url: Marissa,
     },
     {
       name: 'The Maestro',
       id: nanoid(),
       isClicked: false,
-      url: '',
+      url: Maestro,
     }
   ]);
 
