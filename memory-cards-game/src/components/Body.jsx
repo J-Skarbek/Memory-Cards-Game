@@ -38,7 +38,7 @@ function Body() {
       url: Newman,
     },
     {
-      name: 'Putty',
+      name: 'Puddy',
       id: nanoid(),
       isClicked: false,
       url: '',
@@ -62,7 +62,7 @@ function Body() {
       url: '',
     },
     {
-      name: 'Mrs. Jerry',
+      name: 'Jeannie Steinman',
       id: nanoid(),
       isClicked: false,
       url: '',
