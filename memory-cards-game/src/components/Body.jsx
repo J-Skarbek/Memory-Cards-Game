@@ -134,9 +134,10 @@ function Body(props) {
       return newArr;
   }
 
-  function shuffleCards() {
+  function shuffleCards(e) {
     setCards(shuffle([...cards]));
-    props.tallyScore();
+    console.log(e.target)
+    // props.tallyScore();
   }
 
   function testState() {
@@ -170,6 +171,7 @@ function Body(props) {
                 name={card.name}
                 tallyScore={props.tallyScore}
                 shuffleCards={() => shuffleCards()}
+                cardsState={cards}
               />
             )
           })}
