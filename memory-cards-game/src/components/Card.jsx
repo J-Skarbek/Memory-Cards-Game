@@ -7,9 +7,9 @@ function Card(props) {
       <img 
         src={props.url}
         alt={props.name}
-        className="w-64 my-2 mx-auto rounded-lg"
+        className="w-64 mx-auto rounded-lg"
       />
-      <h2 className="text-xl font-bold">{props.name}</h2>
+      <h2 className="text-xl m-4 font-bold whitespace-normal">{props.name}</h2>
     </div>
   )
 }

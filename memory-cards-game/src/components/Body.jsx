@@ -63,7 +63,7 @@ function Body(props) {
       url: Susan,
     },
     {
-      name: 'Franklin Delano Romanowski',
+      name: 'FDR',
       id: nanoid(),
       isClicked: false,
       url: FDR,
@@ -159,7 +159,7 @@ function Body(props) {
       <p>Test</p>
       <button onClick={() => shuffleCards()}>Click to test shuffle the cards array</button>
       <button onClick={testState}>Click to see the state values</button>
-        <div className="cards-container flex flex-wrap gap-4 m4-8 mx-auto">
+        <div className="cards-container w-full flex flex-wrap justify-center gap-4 my-4 mx-auto">
           {cards.map(card => {
             return (
               <Card
