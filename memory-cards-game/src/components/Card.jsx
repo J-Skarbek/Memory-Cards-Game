@@ -3,7 +3,13 @@ import React from "react";
 function Card(props) {
 
   return (
-    <div className="card flex flex-col justify-items-center bg-offWhite border-2 border-slate-100 rounded-3xl drop-shadow-lg" onClick={props.tallyScore}>
+    <div 
+      className="card flex flex-col justify-items-center 
+      bg-offWhite border-2 border-slate-100 rounded-3xl 
+      drop-shadow-lg" 
+      // onClick={props.tallyScore}
+      onClick={props.shuffleCards}
+    >
       <img 
         src={props.url}
         alt={props.name}

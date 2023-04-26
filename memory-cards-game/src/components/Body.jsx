@@ -168,6 +168,7 @@ function Body(props) {
                 isClicked={card.isClicked}
                 name={card.name}
                 tallyScore={props.tallyScore}
+                shuffleCards={() => shuffleCards()}
               />
             )
           })}
