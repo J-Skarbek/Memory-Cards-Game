@@ -159,18 +159,19 @@ function Body(props) {
       <p>Test</p>
       <button onClick={() => shuffleCards()}>Click to test shuffle the cards array</button>
       <button onClick={testState}>Click to see the state values</button>
-        {/* { cards && renderCards } */}
-        {cards.map(card => {
-          return (
-            <Card
-              key={card.id}
-              url={card.url}
-              isClicked={card.isClicked}
-              name={card.name}
-              tallyScore={props.tallyScore}
-            />
-          )
-        })}
+        <div className="cards-container flex flex-wrap m4-8 mx-auto">
+          {cards.map(card => {
+            return (
+              <Card
+                key={card.id}
+                url={card.url}
+                isClicked={card.isClicked}
+                name={card.name}
+                tallyScore={props.tallyScore}
+              />
+            )
+          })}
+        </div>
     </div>
   )
 }
