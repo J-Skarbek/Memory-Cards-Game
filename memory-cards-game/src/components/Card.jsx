@@ -41,7 +41,8 @@ function Card(props) {
       // onClick={(e) => handleClick(e)}
       // onClick={() => console.log(props.isClicked)}
       // onClick={props.shuffleCards}
-      onClick={props.testFunction}
+      // onClick={props.testFunction}
+      onClick={props.testFunctionTwo}
     >
       <img 
         src={props.url}

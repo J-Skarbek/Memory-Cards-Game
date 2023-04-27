@@ -153,6 +153,21 @@ function Body(props) {
     // shuffleCards();
   }
 
+  function updateandShuffle(e) {
+    let character = cards.find(char => char.name === e.target.alt);
+    const newCardsArray = cards.map(card => {
+      if (card.name === e.target.alt) {
+        return {
+          ...card,
+          isClicked: true,
+        }
+      } else {
+        return card;
+      }
+    })
+    setCards(newCardsArray);
+  }
+
   // const renderCards = cards.map(card => {
   //   return (
   //     <Card
@@ -183,6 +198,7 @@ function Body(props) {
                 shuffleCards={() => shuffleCards()}
                 cardsState={cards}
                 testFunction={changeStatus}
+                testFunctionTwo={updateandShuffle}
               />
             )
           })}
