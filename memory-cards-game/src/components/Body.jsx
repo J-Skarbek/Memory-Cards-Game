@@ -136,7 +136,6 @@ function Body(props) {
 
   function shuffleCards() {
     setCards(shuffle([...cards]));
-    // console.log(e.target)
     props.tallyScore();
   }
 
