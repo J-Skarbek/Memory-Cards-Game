@@ -6,23 +6,23 @@ function Card(props) {
   //   props.shuffleCards();
   // }
 
-  function handleClick(e) {
-    console.log(e.target)
-    console.log(e.target.alt)
-    console.log(e.target.textContent)
-    // console.log(e)
-    let newArr = [...props.cardsState]
-    const findCharacter = newArr.find(character => character.name === e.target.textContent)
-    console.log(findCharacter.value + ' is a success')
-  }
+  // function handleClick(e) {
+  //   console.log(e.target)
+  //   console.log(e.target.alt)
+  //   console.log(e.target.textContent)
+  //   // console.log(e)
+  //   let newArr = [...props.cardsState]
+  //   const findCharacter = newArr.find(character => character.name === e.target.textContent)
+  //   console.log(findCharacter.value + ' is a success')
+  // }
 
   return (
     <div 
       className="card flex flex-col justify-items-center 
       bg-offWhite border-2 border-slate-100 rounded-3xl 
       drop-shadow-lg" 
-      onClick={(e) => handleClick(e)}
-      // onClick={props.shuffleCards}
+      // onClick={(e) => handleClick(e)}
+      onClick={props.shuffleCards}
     >
       <img 
         src={props.url}

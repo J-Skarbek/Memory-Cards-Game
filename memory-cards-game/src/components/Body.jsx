@@ -134,10 +134,10 @@ function Body(props) {
       return newArr;
   }
 
-  function shuffleCards(e) {
+  function shuffleCards() {
     setCards(shuffle([...cards]));
-    console.log(e.target)
-    // props.tallyScore();
+    // console.log(e.target)
+    props.tallyScore();
   }
 
   function testState() {
