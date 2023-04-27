@@ -39,8 +39,9 @@ function Card(props) {
       bg-offWhite border-2 border-slate-100 rounded-3xl 
       drop-shadow-lg" 
       // onClick={(e) => handleClick(e)}
-      onClick={() => console.log(props.isClicked)}
+      // onClick={() => console.log(props.isClicked)}
       // onClick={props.shuffleCards}
+      onClick={props.testFunction}
     >
       <img 
         src={props.url}
