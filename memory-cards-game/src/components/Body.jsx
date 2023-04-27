@@ -143,18 +143,7 @@ function Body(props) {
     console.log(cards)
   }
 
-  function changeStatus(e) {
-    console.log('test')
-    let character = cards.find(char => char.name === e.target.alt);
-    // character.isClicked = true;
-    console.log(character)
-    setCards([...cards, {...character, [character.name]: true}]);
-    console.log(character)
-    // shuffleCards();
-  }
-
-  function updateandShuffle(e) {
-    let character = cards.find(char => char.name === e.target.alt);
+  function updateAndShuffle(e) {
     const newCardsArray = cards.map(card => {
       if (card.name === e.target.alt) {
         return {
@@ -165,7 +154,8 @@ function Body(props) {
         return card;
       }
     })
-    setCards(newCardsArray);
+    setCards(shuffle([...newCardsArray]));
+    props.tallyScore();
   }
 
   // const renderCards = cards.map(card => {
@@ -197,8 +187,7 @@ function Body(props) {
                 tallyScore={props.tallyScore}
                 shuffleCards={() => shuffleCards()}
                 cardsState={cards}
-                testFunction={changeStatus}
-                testFunctionTwo={updateandShuffle}
+                testFunctionTwo={updateAndShuffle}
               />
             )
           })}
