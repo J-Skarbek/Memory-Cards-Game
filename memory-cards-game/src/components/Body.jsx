@@ -145,6 +145,10 @@ function Body(props) {
 
   function updateAndShuffle(e) {
     const newCardsArray = cards.map(card => {
+      if (card.name === e.target.alt && card.isClicked === true) {
+        alert('This card has already been clicked, game over!');
+        // return props.resetScore();
+      }
       if (card.name === e.target.alt) {
         return {
           ...card,
