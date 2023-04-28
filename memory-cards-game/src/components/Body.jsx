@@ -94,6 +94,15 @@ function Body(props) {
     },
   ]);
 
+  const [endGame, setEndGame] = React.useState(false);
+
+  React.useEffect(() => {
+    if (endGame === true) {
+      endGameFn();
+      setEndGame(false)
+    }
+  }, [endGame]); 
+
   // function shuffleCards() {
     
   //   setCards(array => {
@@ -148,6 +157,8 @@ function Body(props) {
       if (card.name === e.target.alt && card.isClicked === true) {
         alert('This card has already been clicked, game over!');
         props.resetScore();
+        setEndGame(true);
+        // endGameFn();
       }
       if (card.name === e.target.alt) {
         return {
@@ -157,9 +168,21 @@ function Body(props) {
       } else {
         return card;
       }
+      
     })
     setCards(shuffle([...newCardsArray]));
     props.tallyScore();
+  }
+
+  function endGameFn() {
+    const resetCardsArray = cards.map(card => {
+      return {
+        ...card, 
+        isClicked: false,
+      }
+    });
+    console.log(resetCardsArray)
+    setCards([...resetCardsArray]);
   }
 
   // const renderCards = cards.map(card => {
