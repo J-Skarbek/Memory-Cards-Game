@@ -15,8 +15,6 @@ import Susan from '../assets/susan-on-seinfeld.jpg'
 import Marissa from '../assets/tomai.jpg'
 import Jerry from '../assets/jerry.jpg'
 
-
-
 function Body(props) {
 
   const [cards, setCards] = React.useState([
@@ -103,28 +101,6 @@ function Body(props) {
     }
   }, [endGame]); 
 
-  // function shuffleCards() {
-    
-  //   setCards(array => {
-  //     const newArr = array;
-  //     let m = newArr.length, t, i;
-  
-  //     // While there remain elements to shuffle…
-  //     while (m) {
-    
-  //       // Pick a remaining element…
-  //       i = Math.floor(Math.random() * m--);
-    
-  //       // And swap it with the current element.
-  //       t = newArr[m];
-  //       newArr[m] = newArr[i];
-  //       newArr[i] = t;
-  //     }
-  //     return newArr;
-  //   })
-  //   // console.log(array)
-  // }
-
   function shuffle(array) {
     let newArr = array;
     let m = newArr.length, t, i;
@@ -152,13 +128,12 @@ function Body(props) {
     console.log(cards)
   }
 
-  function updateAndShuffle(e) {
+  function handleClick(e) {
     const newCardsArray = cards.map(card => {
       if (card.name === e.target.alt && card.isClicked === true) {
         alert('This card has already been clicked, game over!');
         props.resetScore();
         setEndGame(true);
-        // endGameFn();
       }
       if (card.name === e.target.alt) {
         return {
@@ -181,23 +156,9 @@ function Body(props) {
         isClicked: false,
       }
     });
-    // console.log(resetCardsArray)
     setCards([...resetCardsArray]);
     props.resetScore()
   }
-
-  // const renderCards = cards.map(card => {
-  //   return (
-  //     <Card
-  //       key={card.id}
-  //       url={card.url}
-  //       isClicked={card.isClicked}
-  //       name={card.name}
-  //       tallyScore={props.tallyScore}
-  //       testFunction={changeStatus}
-  //     />
-  //   )
-  // })
 
   return (
     <div className="body-container w-5/6 my-4 mx-auto">
@@ -210,12 +171,8 @@ function Body(props) {
               <Card
                 key={card.id}
                 url={card.url}
-                isClicked={card.isClicked}
                 name={card.name}
-                tallyScore={props.tallyScore}
-                shuffleCards={() => shuffleCards()}
-                cardsState={cards}
-                testFunctionTwo={updateAndShuffle}
+                handleClick={handleClick}
               />
             )
           })}
