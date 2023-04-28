@@ -200,7 +200,7 @@ function Body(props) {
   // })
 
   return (
-    <div>
+    <div className="body-container w-5/6 my-4 mx-auto">
       <p>Test</p>
       <button onClick={() => shuffleCards()}>Click to test shuffle the cards array</button>
       <button onClick={testState}>Click to see the state values</button>
