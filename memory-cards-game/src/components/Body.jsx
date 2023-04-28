@@ -147,7 +147,7 @@ function Body(props) {
     const newCardsArray = cards.map(card => {
       if (card.name === e.target.alt && card.isClicked === true) {
         alert('This card has already been clicked, game over!');
-        // return props.resetScore();
+        props.resetScore();
       }
       if (card.name === e.target.alt) {
         return {

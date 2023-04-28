@@ -14,11 +14,8 @@ function App() {
   const tallyScore = () => setScore(score => score += 1);
 
   const resetTheScore = () => {
-    if (score < highScore) {
-      return setScore(0)
-    } else {
-      return setHighScore(score)
-    }
+    if (score > highScore) setHighScore(score);
+    return setScore(0);
   }
 
   return (
