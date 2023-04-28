@@ -181,8 +181,9 @@ function Body(props) {
         isClicked: false,
       }
     });
-    console.log(resetCardsArray)
+    // console.log(resetCardsArray)
     setCards([...resetCardsArray]);
+    props.resetScore()
   }
 
   // const renderCards = cards.map(card => {
