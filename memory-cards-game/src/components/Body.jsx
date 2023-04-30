@@ -147,7 +147,7 @@ function Body(props) {
       }
       
     })
-    setCards(shuffle([...newCardsArray]));
+    setCards(shuffle(newCardsArray));
     props.tallyScore();
   }
 
