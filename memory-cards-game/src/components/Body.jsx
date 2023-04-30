@@ -99,7 +99,18 @@ function Body(props) {
       endGameFn();
       setEndGame(false)
     }
-  }, [endGame]); 
+  }, [endGame]);
+
+  function endGameFn() {
+    const resetCardsArray = cards.map(card => {
+      return {
+        ...card, 
+        isClicked: false,
+      }
+    });
+    setCards([...resetCardsArray]);
+    props.resetScore()
+  }
 
   function shuffle(array) {
     let newArr = array;
@@ -117,15 +128,6 @@ function Body(props) {
         newArr[i] = t;
       }
       return newArr;
-  }
-
-  function shuffleCards() {
-    setCards(shuffle([...cards]));
-    props.tallyScore();
-  }
-
-  function testState() {
-    console.log(cards)
   }
 
   function handleClick(e) {
@@ -147,17 +149,6 @@ function Body(props) {
     })
     setCards(shuffle([...newCardsArray]));
     props.tallyScore();
-  }
-
-  function endGameFn() {
-    const resetCardsArray = cards.map(card => {
-      return {
-        ...card, 
-        isClicked: false,
-      }
-    });
-    setCards([...resetCardsArray]);
-    props.resetScore()
   }
 
   return (

@@ -2,7 +2,6 @@ import React from "react";
 
 function Header(props) {
 
-
   return (
     <div className="header flex justify-between items-center bg-offWhite p-4 mb-8">
       <div className="header-right flex flex-col items-start">
