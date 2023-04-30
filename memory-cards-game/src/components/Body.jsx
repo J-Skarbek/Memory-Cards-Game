@@ -162,9 +162,6 @@ function Body(props) {
 
   return (
     <div className="body-container w-5/6 my-4 mx-auto">
-      <p>Test</p>
-      <button onClick={() => shuffleCards()}>Click to test shuffle the cards array</button>
-      <button onClick={testState}>Click to see the state values</button>
         <div className="cards-container w-full flex flex-wrap justify-center gap-4 my-4 mx-auto">
           {cards.map(card => {
             return (
